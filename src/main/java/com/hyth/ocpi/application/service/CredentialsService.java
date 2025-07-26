@@ -7,14 +7,13 @@ import org.springframework.stereotype.Service;
 import com.hyth.ocpi.domain.model.Credentials;
 import com.hyth.ocpi.domain.repository.CredentialsRepository;
 
+import lombok.RequiredArgsConstructor;
+
 @Service
+@RequiredArgsConstructor
 public class CredentialsService {
     
     private final CredentialsRepository repository;
-
-    public CredentialsService(CredentialsRepository repository) {
-        this.repository = repository;
-    }
 
     public Optional<Credentials> get() {
         return repository.get();

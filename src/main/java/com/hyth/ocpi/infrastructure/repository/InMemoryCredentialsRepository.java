@@ -9,6 +9,7 @@ import com.hyth.ocpi.domain.repository.CredentialsRepository;
 
 @Repository
 public class InMemoryCredentialsRepository implements CredentialsRepository {
+    
     private Credentials credentials;
 
     @Override
