@@ -1,5 +1,11 @@
 package com.hyth.ocpi.domain.repository;
 
-public class CredentialsRepository {
-    //
+import java.util.Optional;
+
+import com.hyth.ocpi.domain.model.Credentials;
+
+public interface CredentialsRepository {
+    Optional<Credentials> get();
+    void save(Credentials credentials);
+    void delete();
 }
